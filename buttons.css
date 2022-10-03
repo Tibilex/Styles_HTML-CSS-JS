@@ -29,6 +29,7 @@
 @keyframes button2_pulsate{
     0%{
         box-shadow: 0 0 25px #df3c4f, 0 0 25px #e2969f;
+        
     }
 }
 
@@ -194,7 +195,7 @@
     width: 100%;
 }
 
-/* button 5*/
+/* button 6*/
 
 .button6{
     position: relative;
@@ -278,4 +279,48 @@
     filter: blur(20px);
     opacity: 1;
     animation: animate 6s linear infinite;
+}
+
+/* button 8 */
+
+.button8{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.button8 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #6c4ba5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.button8 span:nth-child(2){
+    color: #6c4ba5;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 2;
+    transition: .5s;
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%, 40% 50%);
+}
+
+.button8 span:nth-child(2):hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+}
+
+.button8 span:nth-child(1):hover
+~ span:nth-child(2){
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
 }
