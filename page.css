@@ -26,6 +26,14 @@
     background-color: #404244;
 }
 
+.block__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .Loading__block{
     display: flex;
     justify-content: center;

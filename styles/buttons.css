@@ -1,0 +1,396 @@
+/* Button 1 template */
+.btm{
+    position: relative;
+    background: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 6px;
+    transition: .4s;
+    border: 2px solod #fff;
+    padding: 16px 50px;
+    font-weight: 500;
+    z-index: 1;
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+
+.btm::before,
+.btm::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+
+.btm:hover{
+    color: #000;
+}
+
+/* end 1 template */
+
+/* button 1 block*/
+/* blink top */
+.btn-1__blink-top::before{
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transition-duration: .4s;
+    background-color: #fff;
+}
+
+.btn-1__blink-top:hover::before{
+    height: 100%;
+    color: #000;
+}
+
+/* blink bottom */
+.btn-1__blink-bottom::before{
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    transition-duration: .4s;
+    background-color: #fff;
+}
+
+.btn-1__blink-bottom:hover::before{
+    height: 100%;
+    color: #000;
+}
+
+/* blink left */
+.btn-1__blink-left::before{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition-duration: .4s;
+    background-color: #fff;
+}
+
+.btn-1__blink-left:hover::before{
+    height: 100%;
+    width: 100%;
+}
+
+/* blink right */
+.btn-1__blink-right::before{
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    transition-duration: .4s;
+    background-color: #fff;
+}
+
+.btn-1__blink-right:hover::before{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* button 2*/
+/* blink left deg */
+.btn-2__blink-left{
+    color: #8fbc8f;
+    border: 2px solid #8fbc8f;
+}
+
+.btn-2__blink-left::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #8fbc8f;
+    transform: skewX(35deg);
+    transition: width 1s;
+    z-index: -1;
+}
+
+.btn-2__blink-left:hover::before{
+    width: 150%;
+}
+/* blink right deg */
+.btn-2__blink-right{
+    color: #8fbc8f;
+    border: 2px solid #8fbc8f;
+}
+
+.btn-2__blink-right::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #8fbc8f;
+    transform: skewX(35deg);
+    transition: width 1s;
+    z-index: -1;
+}
+
+.btn-2__blink-right:hover::before{
+    width: 150%;
+}
+
+/* blink left-right deg */
+.btn-2__blink-two_way-deg{
+    color: #8fbc8f;
+    outline: 2px solid #8fbc8f;
+}
+
+.btn-2__blink-two_way-deg::before{
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #8fbc8f;
+    transform: skewX(35deg);
+    transition: width 1s;
+    z-index: -1;
+}
+
+.btn-2__blink-two_way-deg::after{
+    top: 0;
+    right: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #8fbc8f;
+    transform: skewX(35deg);
+    transition: width 1s;
+    z-index: -1;
+}
+
+.btn-2__blink-two_way-deg:hover::before,
+.btn-2__blink-two_way-deg:hover::after{
+    width: 100%;
+}
+
+/* two way shadow */
+.btn-2__blink-two_way{
+    color: #8fbc8f;
+    outline: 2px solid #8fbc8f;
+}
+
+.btn-2__blink-two_way:hover{
+    box-shadow: inset -8.5em 0 0 0 #8fbc8f, inset 8.5em 0 0 0 #8fbc8f;
+}
+
+/* button 3*/
+/* pulsate border */
+@keyframes button3_pulsate{
+    0%{
+        box-shadow: 0 0 25px #df3c4f, 0 0 25px #e2969f;       
+    }
+}
+
+.btn-3__pulsate{
+    color: #df3c4f;
+    border: 2px solid #df3c4f;
+    font-weight: 500;
+}
+
+.btn-3__pulsate:hover{
+    animation: button3_pulsate 1s ease-in-out;
+    color: #df3c4f;
+}
+/* solid pulsate */
+.btn-3__pulsate-solid{
+    color: #df3c4f;
+    border: 2px solid #df3c4f;
+    font-weight: 500;
+}
+
+.btn-3__pulsate-solid:hover{
+    animation: button3_pulsate 1s ease-in-out;
+    color: #000;
+    background-color: #df3c4f;
+}
+
+/* button 4*/
+.button4{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #ff7f27;
+    padding: 16px 50px;
+    transition: .5s;
+}
+
+.button4::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #ff7f27;
+    border-left: 2px solid #ff7f27;
+    transition: .4s;
+    transition-delay: .4s;   
+}
+
+.button4::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #ff7f27;
+    border-right: 2px solid #ff7f27;
+    transition: .4s;
+    transition-delay: .4s;   
+}
+
+.button4:hover::before, 
+.button4:hover::after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+    border-radius: 6px;
+}
+
+.button4:hover{
+    background: #ff7f27;
+    color: #000;
+    box-shadow: 0 0 50px #ff7f27;
+    transition-delay: .5s;
+    border-radius: 6px;
+}
+
+/* button 5*/
+
+.button5{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 50px;
+    color: #8fbc8f;
+    font-weight: 500;
+    transition: .4s;
+    transition-delay: .4s;
+}
+
+.button5:hover{
+    background-color: #8fbc8f;
+    color: #000;
+}
+
+.button5::before{
+    content: "";
+    position: absolute;
+    border-bottom: 4px solid #000;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: .4s;
+    transition-delay: .4s;
+
+}
+
+.button5:hover::before{
+    width: 100%;
+    height: 10px;
+}
+
+/* button 6 */
+
+.button6{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 50px;
+    color: #fff;
+    font-weight: 500;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.button6:hover{
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+.button6::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.button6:hover::before{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 6s linear infinite;
+}
+
+/* button 7 */
+
+.button7{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.button7 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #6c4ba5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.button7 span:nth-child(2){
+    color: #6c4ba5;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 2;
+    transition: .5s;
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%, 40% 50%);
+}
+
+.button7 span:nth-child(2):hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+}
+
+.button8 span:nth-child(1):hover
+~ span:nth-child(2){
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
+}
