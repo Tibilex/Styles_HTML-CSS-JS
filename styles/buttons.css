@@ -390,7 +390,39 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
 }
 
-.button8 span:nth-child(1):hover
+.button7 span:nth-child(1):hover
 ~ span:nth-child(2){
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
+}
+
+/* button 8 */
+
+.button8{
+    background-color: transparent;
+    color:#fff;
+    border: 2px;
+}
+.button8:hover{
+    background-color: transparent;
+    color:#df3c4f;
+    font-weight: 500;
+}
+
+.button8::before{
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #df3c4f;
+    border-width: 80px 100px;
+    transform: rotate(360deg);
+    transition: 1s;
+    transform-origin: left;
+}
+
+.button8:hover::before{
+    border-color: #03a9f4;
+    transform: rotate(160deg);
+    border: 2px solid #03a9f4;
 }
